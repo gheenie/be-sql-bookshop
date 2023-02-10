@@ -1,7 +1,7 @@
 \c my_bookshop
 
 INSERT INTO authors 
-    (author_name, fun_fact)
+    (full_name, fun_fact)
 VALUES 
     ('Dan Brown', 'Favourite colour is not brown'),
     ('Antoine de Saint-Exupéry', 'He was a successful commercial pilot before World War II, working airmail routes in Europe, Africa, and South America.'),
@@ -18,3 +18,4 @@ VALUES
     ('George Orwell', 'Orwell intentionally got himself arrested for being "drunk and incapable."'),
     ('Jane Austen', 'The author of her first novel, Sense and Sensibility was simply "A Lady," and her later works like Pride and Prejudice were credited to "the Author of Sense and Sensibility." She wasn''t named as the author of her novels until after her death!'),
     ('Margaret Atwood', 'Atwood was the first author to contribute to The Future Library Project, which will take one writer''s contribution each year for one hundred years to be printed in the year 2114.');
+SELECT * FROM  authors;
