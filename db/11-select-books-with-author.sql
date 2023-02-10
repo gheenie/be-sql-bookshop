@@ -8,7 +8,7 @@ ON books.author_id = authors.author_id;
 
 \echo '\n Here is a list of authors without an associated book:\n'
 
-SELECT books.author_id, authors.author_id, full_name
+SELECT title, authors.author_id, full_name
 FROM books RIGHT OUTER JOIN authors
 ON books.author_id = authors.author_id
-WHERE books.author_id IS NULL;
+WHERE title IS NULL;
