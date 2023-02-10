@@ -2,12 +2,13 @@
 
 \echo '\n Here is a list of book titles with the corresponding author:\n'
 
-SELECT title, author
-FROM books;
+SELECT title, full_name
+FROM books JOIN authors
+ON books.author_id = authors.author_id;
 
 \echo '\n Here is a list of authors without an associated book:\n'
 
-SELECT authors.author_name
-FROM authors LEFT OUTER JOIN books
-ON authors.author_name = books.author
-WHERE books.author IS NULL;
+SELECT books.author_id, authors.author_id, full_name
+FROM books RIGHT OUTER JOIN authors
+ON books.author_id = authors.author_id
+WHERE books.author_id IS NULL;
